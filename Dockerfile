@@ -1,4 +1,4 @@
-# ===== BUILD REACT =====
+# ===== BUILD =====
 FROM node:20 AS builder
 
 WORKDIR /app
@@ -9,14 +9,14 @@ RUN yarn install --ignore-peer-deps
 COPY . .
 RUN yarn build
 
-# ===== NGINX =====
+# ===== RUN =====
 FROM nginx:alpine
 
+# XÓA nginx default
 RUN rm -rf /usr/share/nginx/html/*
 
+# COPY build React
 COPY --from=builder /app/build /usr/share/nginx/html
-
-COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
