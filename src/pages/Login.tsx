@@ -40,6 +40,7 @@ export default function Login() {
         <p>{errors.password?.message}</p>
 
         <Button type="submit">Login</Button>
+        <Button type="button">Test Deploy</Button>
       </form>
     </div>
   );
