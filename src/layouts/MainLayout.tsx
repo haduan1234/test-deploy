@@ -5,7 +5,6 @@ type Props = {
 };
 
 export default function MainLayout({ children }: Props) {
-  
   return (
     <div className="flex h-screen">
       <div className="w-60 bg-gray-800 text-white p-4">
