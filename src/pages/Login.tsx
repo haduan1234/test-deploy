@@ -28,7 +28,6 @@ export default function Login() {
   };
 
   return (
-    
     <div className="flex w-screen items-center justify-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
